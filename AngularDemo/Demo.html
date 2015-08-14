@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="angular.min.js"></script>
+    <script type="text/javascript">
+        var routeMap = angular.module('demoApp', [])
+        .controller('UserCtrl', ['$scope', function ($scope) {
+            $scope.Users = [{ first: "Asif", last: "Khan" },
+                            { first: "Sam", last: "Den" },
+                            { first: "Tom", last: "Pil" },
+                           { first: "Andrew", last: "Sim" }];
+        }]);
+    </script>
+</head>
+<body ng-app="demoApp">
+    <div ng-controller="UserCtrl">
+        <h1 ng-repeat="user in Users">
+            {{user.first}}{{user.last}}
+        </h1>
+    </div>
+</body>
+</html>
