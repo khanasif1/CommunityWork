@@ -1,0 +1,14 @@
+C:\DevProjects\Domain.PropertyMatch\Domain.PropertyMatch.IService\bin\Debug\Domain.PropertyMatch.IService.dll
+C:\DevProjects\Domain.PropertyMatch\Domain.PropertyMatch.IService\bin\Debug\Domain.PropertyMatch.IService.pdb
+C:\DevProjects\Domain.PropertyMatch\Domain.PropertyMatch.IService\obj\Debug\Domain.PropertyMatch.IService.csprojResolveAssemblyReference.cache
+C:\DevProjects\Domain.PropertyMatch\Domain.PropertyMatch.IService\obj\Debug\Domain.PropertyMatch.IService.dll
+C:\DevProjects\Domain.PropertyMatch\Domain.PropertyMatch.IService\obj\Debug\Domain.PropertyMatch.IService.pdb
+C:\DevProjects\Domain.PropertyMatch\Domain.PropertyMatch.IService\bin\Debug\Domain.PropertyMatch.Model.dll
+C:\DevProjects\Domain.PropertyMatch\Domain.PropertyMatch.IService\bin\Debug\Domain.PropertyMatch.Model.pdb
+D:\DevProjects\Domain.PropertyMatch\Domain.PropertyMatch.IService\bin\Debug\Domain.PropertyMatch.IService.dll
+D:\DevProjects\Domain.PropertyMatch\Domain.PropertyMatch.IService\bin\Debug\Domain.PropertyMatch.IService.pdb
+D:\DevProjects\Domain.PropertyMatch\Domain.PropertyMatch.IService\bin\Debug\Domain.PropertyMatch.Model.dll
+D:\DevProjects\Domain.PropertyMatch\Domain.PropertyMatch.IService\bin\Debug\Domain.PropertyMatch.Model.pdb
+D:\DevProjects\Domain.PropertyMatch\Domain.PropertyMatch.IService\obj\Debug\Domain.PropertyMatch.IService.csprojResolveAssemblyReference.cache
+D:\DevProjects\Domain.PropertyMatch\Domain.PropertyMatch.IService\obj\Debug\Domain.PropertyMatch.IService.dll
+D:\DevProjects\Domain.PropertyMatch\Domain.PropertyMatch.IService\obj\Debug\Domain.PropertyMatch.IService.pdb

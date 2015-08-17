@@ -1,0 +1,8 @@
+C:\DevProjects\Domain.PropertyMatch\Domain.PropertyMatch.Model\bin\Debug\Domain.PropertyMatch.Model.dll
+C:\DevProjects\Domain.PropertyMatch\Domain.PropertyMatch.Model\bin\Debug\Domain.PropertyMatch.Model.pdb
+C:\DevProjects\Domain.PropertyMatch\Domain.PropertyMatch.Model\obj\Debug\Domain.PropertyMatch.Model.dll
+C:\DevProjects\Domain.PropertyMatch\Domain.PropertyMatch.Model\obj\Debug\Domain.PropertyMatch.Model.pdb
+D:\DevProjects\Domain.PropertyMatch\Domain.PropertyMatch.Model\bin\Debug\Domain.PropertyMatch.Model.dll
+D:\DevProjects\Domain.PropertyMatch\Domain.PropertyMatch.Model\bin\Debug\Domain.PropertyMatch.Model.pdb
+D:\DevProjects\Domain.PropertyMatch\Domain.PropertyMatch.Model\obj\Debug\Domain.PropertyMatch.Model.dll
+D:\DevProjects\Domain.PropertyMatch\Domain.PropertyMatch.Model\obj\Debug\Domain.PropertyMatch.Model.pdb
