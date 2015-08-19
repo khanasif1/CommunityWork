@@ -1,0 +1,12 @@
+C:\DevProjects\ServiceStackApi\Consumer\bin\Debug\Consumer.exe.config
+C:\DevProjects\ServiceStackApi\Consumer\bin\Debug\Consumer.exe
+C:\DevProjects\ServiceStackApi\Consumer\bin\Debug\Consumer.pdb
+C:\DevProjects\ServiceStackApi\Consumer\bin\Debug\ServiceStack.Client.dll
+C:\DevProjects\ServiceStackApi\Consumer\bin\Debug\ServiceStack.Interfaces.dll
+C:\DevProjects\ServiceStackApi\Consumer\bin\Debug\ServiceStack.Text.dll
+C:\DevProjects\ServiceStackApi\Consumer\obj\Debug\Consumer.csprojResolveAssemblyReference.cache
+C:\DevProjects\ServiceStackApi\Consumer\obj\Debug\Consumer.exe
+C:\DevProjects\ServiceStackApi\Consumer\obj\Debug\Consumer.pdb
+C:\Users\Asif\Downloads\ServiceStackApi\Consumer\bin\Debug\Consumer.exe.config
+C:\Users\Asif\Downloads\ServiceStackApi\Consumer\obj\Debug\Consumer.exe
+C:\Users\Asif\Downloads\ServiceStackApi\Consumer\obj\Debug\Consumer.pdb
