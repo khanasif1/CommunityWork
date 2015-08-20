@@ -1,0 +1,19 @@
+Get Token
+-----------
+Url :http://localhost:3375/token
+Head:
+User-Agent: Fiddler
+Host: localhost:3375
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 55
+Body:
+grant_type=password&username=Taiseer&password=SuperPass
+
+GetSecureData
+--------------
+Url: http://localhost:3375/api/orders
+Head:
+Accept: application/json
+Content-Type: application/json
+Authorization : $$TOKEN KEY$$
+Host: localhost:3375

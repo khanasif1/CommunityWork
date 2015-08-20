@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJSTokenAuthentication", "AngularJSTokenAuthentication\AngularJSTokenAuthentication.csproj", "{9A0763D5-BDBB-42DA-8FE1-28346AA41ADD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJSTokenAuthentication.Web", "AngularJSTokenAuthentication.Web\AngularJSTokenAuthentication.Web.csproj", "{CD2360A6-69F8-44AA-A2B0-0B2FAC1DD814}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://khanasif1.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AngularJSTokenAuthentication\\AngularJSTokenAuthentication.csproj
+		SccProjectName1 = AngularJSTokenAuthentication
+		SccLocalPath1 = AngularJSTokenAuthentication
+		SccProjectUniqueName2 = AngularJSTokenAuthentication.Web\\AngularJSTokenAuthentication.Web.csproj
+		SccProjectName2 = AngularJSTokenAuthentication.Web
+		SccLocalPath2 = AngularJSTokenAuthentication.Web
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A0763D5-BDBB-42DA-8FE1-28346AA41ADD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A0763D5-BDBB-42DA-8FE1-28346AA41ADD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A0763D5-BDBB-42DA-8FE1-28346AA41ADD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A0763D5-BDBB-42DA-8FE1-28346AA41ADD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD2360A6-69F8-44AA-A2B0-0B2FAC1DD814}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD2360A6-69F8-44AA-A2B0-0B2FAC1DD814}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD2360A6-69F8-44AA-A2B0-0B2FAC1DD814}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD2360A6-69F8-44AA-A2B0-0B2FAC1DD814}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
