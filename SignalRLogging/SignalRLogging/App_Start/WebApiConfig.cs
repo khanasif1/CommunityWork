@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Web.Http;
 
 namespace SignalRLogging
@@ -20,6 +21,7 @@ namespace SignalRLogging
                 defaults: new { id = RouteParameter.Optional }
             );
             Global.LogMessage = Requestlog.PostToClient;
+            config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
         }
     }
     public class Global

@@ -17,8 +17,9 @@ namespace SignalRLogging.Controllers
         }
 
         // GET api/values/5
-        public string Get(int id)
+        public string Get(string id)
         {
+            Global.LogMessage("Message from IoT : " + id);
             return "value";
         }
 
