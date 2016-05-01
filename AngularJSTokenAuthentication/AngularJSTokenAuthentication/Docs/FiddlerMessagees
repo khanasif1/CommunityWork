@@ -1,4 +1,4 @@
-Get Token
+Get Token (Check spaces in Uid and Pwd)
 -----------
 Url :http://localhost:3375/token
 Head:
@@ -15,5 +15,5 @@ Url: http://localhost:3375/api/orders
 Head:
 Accept: application/json
 Content-Type: application/json
-Authorization : $$TOKEN KEY$$
+Authorization : bearer $$TOKEN KEY$$
 Host: localhost:3375

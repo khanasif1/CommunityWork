@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-local-storage.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js"></script>
+    <script>
+        var app = angular.module('app', ['LocalStorageModule']);
+        //app.run(['authService', function (authService) {
+        //    authService.fillAuthData();
+        //}]);
+        app.config(function ($httpProvider) {
+            $httpProvider.interceptors.push('authInterceptorService');
+        });
+        app.factory('authService', ['$http', '$q', 'localStorageService', function ($http, $q, localStorageService) {
+            var serviceBase = "http://localhost:3375/";
+            var authServiceFactory = [];
+            var _authentication = {
+                isAuth: false,
+                userName: ""
+            };
+
+            var _login = function (loginData) {
+                var data = "grant_type=password&username=" + loginData.userName + "&password=" + loginData.password;
+
+                var deferred = $q.defer();
+
+                $http.post(serviceBase + 'token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
+                .success(function (response) {
+                    localStorageService.set('authorizationData', { token: response.access_token, userName: loginData.userName });
+
+                    _authentication.isAuth = true;
+                    _authentication.userName = loginData.userName;
+
+                    deferred.resolve(response);
+                })
+                .error(function (error, status) {
+                    deferred.reject(error);
+                });
+                return deferred.promise;
+            };
+
+            var _fillAuthData = function () {
+                var authData = localStorageService.get('authorizationData');
+                if (authData) {
+                    _authentication.isAuth = true;
+                    _authentication.userName = authData.userName;
+                }
+            };
+
+            authServiceFactory.login = _login;
+            authServiceFactory.authentication = _authentication;
+            authServiceFactory.fillAuthData = _fillAuthData;
+
+            return authServiceFactory;
+        }]);
+
+        app.factory('UserDetailsService', ['$http', function ($http) {
+            var serviceBase = 'http://localhost:3375/';
+            var userdeyailsServiceFactory = {};
+
+            var _getUserDetails = function () {
+                return $http.get(serviceBase + 'api/UserDetails').then(function (result) {
+                    return result;
+                });
+            };
+            userdeyailsServiceFactory.getUserDetails = _getUserDetails;
+            return userdeyailsServiceFactory;
+        }]);
+
+
+        app.factory('authInterceptorService', ['$q', 'localStorageService'], function ($q, localStorageService) {
+
+            var authInterceptorServiceFactory = [];
+            var _request = function (config) {
+                config.headers = config.headers || {};
+
+                var authData = localStorageService.get('authorizationData');
+                if (authData)
+                {
+                    config.headers.Authorization = 'Bearer ' + authData.token;
+                }
+                return config;
+            }
+
+            var _responseError = function (rejection) {
+                if (rejection.status == 401) {
+                    alert("401 Error");
+                }
+                return $q.reject(rejection);
+            }
+            authInterceptorServiceFactory.request = _request;
+            authInterceptorServiceFactory.responseError = _responseError;
+            
+            return authInterceptorServiceFactory;
+        });
+
+       
+
+        app.controller('loginController', ['$scope', 'authService', function ($scope, authService) {
+            $scope.loginData = {
+                userName: "",
+                password: ""
+            };            
+
+            $scope.login = function () {
+                
+                authService.login($scope.loginData).then(function (response) {
+                    var data = response.access_token;
+                    $location.path('/orders')
+                    $scope.message = respond.userName;
+                },
+                function (error) {
+                    $scope.message = error.error_description;
+                });
+            };
+        }]);
+        //app.controller('userdetailsController', ['$scope', 'UserDetailsService', function ($scope, UserDetailsService) {
+        //    $scope.userDetails = [];
+        //    $scope.getUserData = function () {
+
+        //        UserDetailsService.getUserDetails().then(function (result) {
+        //            $scope.userDetails = result.data;
+        //        },
+        //        function (error) {
+        //            alert(error.message);
+        //        });
+        //    };
+        //}]);
+        
+    </script>
+</head>
+
+
+
+<body data-ng-app="app" >
+    <div data-ng-controller="loginController">
+        <h2 class="form-login-heading">Login</h2>
+        <input type="text" class="form-control" placeholder="Username" data-ng-model="loginData.userName" required autofocus>
+        <input type="password" class="form-control" placeholder="Password" data-ng-model="loginData.password" required>
+        <button class="btn btn-lg btn-info btn-block" type="button" data-ng-click="login()">Login</button>
+        <div data-ng-hide="message == ''" class="alert alert-danger">
+            {{message}}
+        </div>
+    </div>
+    <!--<div class="col-md-8" data-ng-controller="userdetailsController">
+        <button class="btn btn-lg btn-info btn-block" type="button" data-ng-click="getUserData()">GetData</button>
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>IsValid</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="userDetail in userDetails">
+                    <td>
+                        {{ userDetail.UserID }}
+                    </td>
+                    <td>
+                        {{ userDetail.UserName }}
+                    </td>
+                    <td>
+                        {{ userDetail.UserCity }}
+                    </td>
+                    <td>
+                        {{ userDetail.IsUserValid }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>-->
+</body>
+</html>

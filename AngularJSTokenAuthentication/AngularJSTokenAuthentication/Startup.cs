@@ -7,9 +7,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 
+[assembly: OwinStartup(typeof(AngularJSTokenAuthentication.Startup))]
 namespace AngularJSTokenAuthentication
 {
-    [assembly: OwinStartup(typeof(AngularJSTokenAuthentication.Startup))]
+    
     public class Startup
     {
         public void Configuration(IAppBuilder app)
@@ -17,7 +18,7 @@ namespace AngularJSTokenAuthentication
             ConfigureOAuth(app);
             HttpConfiguration config = new HttpConfiguration();
             WebApiConfig.Register(config);
-            app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
+            //app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
             app.UseWebApi(config);
         }
         public void ConfigureOAuth(IAppBuilder app)

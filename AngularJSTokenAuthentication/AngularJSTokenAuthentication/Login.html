@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-local-storage.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js"></script>
+    <script>
+        var app = angular.module('app', ['LocalStorageModule']);
+
+        angular.module('app').factory('authService', ['$http', '$q', 'localStorageService', function ($http, $q, localStorageService) {
+            var serviceBase = "http://localhost:3375/";
+            var authServiceFactory = [];
+
+            var _login = function (loginData) {
+                var data = "grant_type=password&username=" + loginData.userName + "&password=" + loginData.password;
+
+                var deferred = $q.defer();
+                
+                $http.post(serviceBase + 'token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
+                .success(function (response) {
+                   localStorageService.set('authorizationData', { token: response.access_token, userName: loginData.userName });
+                    deferred.resolve(response);
+                })
+                .error(function (error, status) {
+                    deferred.reject(error);
+                });
+                return deferred.promise;
+            };
+            authServiceFactory.login = _login;
+
+            return authServiceFactory;
+        }]);
+        
+
+        angular.module('app').controller('loginController', ['$scope', 'authService', function ($scope, authService) {
+       
+            $scope.message = "Test";
+            $scope.loginData = {
+                userName: "",
+                password: ""
+            };            
+
+            $scope.login = function () {
+                
+                authService.login($scope.loginData).then(function (response) {
+                    var data = response.access_token;
+                },
+                function (error) {
+                    $scope.message = error.error_description;
+                });
+            };
+        }]);
+
+    </script>
+</head>
+
+
+
+<body data-ng-app="app" >
+    <div data-ng-controller="loginController">
+        <h2 class="form-login-heading">Login</h2>
+        <input type="text" class="form-control" placeholder="Username" data-ng-model="loginData.userName" required autofocus>
+        <input type="password" class="form-control" placeholder="Password" data-ng-model="loginData.password" required>
+        <button class="btn btn-lg btn-info btn-block" type="button" data-ng-click="login()">Login</button>
+    </div>
+</body>
+</html>
