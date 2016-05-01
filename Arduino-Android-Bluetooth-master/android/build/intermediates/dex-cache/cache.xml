@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Asif\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.2.2\b76bee23cd3f3ee9b98bc7c2c14670e821ddbbfd\httpcore-4.2.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b76bee23cd3f3ee9b98bc7c2c14670e821ddbbfd">
+        <dex dex="C:\Dev\Arduino-Android-Bluetooth-master\android\app\build\intermediates\pre-dexed\release\httpcore-4.2.2-77c43aa032cf64939704ad8e0d5257055fc323e8.jar" />
+    </item>
+    <item
+        jar="C:\Dev\Arduino-Android-Bluetooth-master\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Dev\Arduino-Android-Bluetooth-master\android\app\build\intermediates\pre-dexed\release\classes-d96c5bb60df8e1b34865394d862904742ae256c9.jar" />
+    </item>
+    <item
+        jar="C:\Users\Asif\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpmime\4.2.3\118ae1bc7f3aeeddfe564f0edfd79c11d09d17d1\httpmime-4.2.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="118ae1bc7f3aeeddfe564f0edfd79c11d09d17d1">
+        <dex dex="C:\Dev\Arduino-Android-Bluetooth-master\android\app\build\intermediates\pre-dexed\release\httpmime-4.2.3-8ea392322eab8feebd22810a482decb0cc5888d4.jar" />
+    </item>
+    <item
+        jar="C:\Dev\Arduino-Android-Bluetooth-master\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Dev\Arduino-Android-Bluetooth-master\android\app\build\intermediates\pre-dexed\release\internal_impl-21.0.3-f392403a39c46a632921601a345c0cdca2482557.jar" />
+    </item>
+    <item
+        jar="C:\Dev\Arduino-Android-Bluetooth-master\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Dev\Arduino-Android-Bluetooth-master\android\app\build\intermediates\pre-dexed\release\classes-6c9aec8aaaa128f90cd70e8a8134637d73b5a565.jar" />
+    </item>
+    <item
+        jar="C:\Users\Asif\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="C:\Dev\Arduino-Android-Bluetooth-master\android\app\build\intermediates\pre-dexed\release\support-annotations-21.0.3-b0fe4dc6fe0168efa38a0d6f8a84319a1bce309c.jar" />
+    </item>
+
+</items>
